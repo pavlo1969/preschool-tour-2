@@ -66,7 +66,7 @@ class PreschoolTour {
   // ── Boot ─────────────────────────────────────────────────────────────────
 
   _playIntroVideo() {
-    this._playVideo(this.config.introVideo, 'Introduction', () => {
+    this._playVideo(this.config.introVideo, 'Вступ', () => {
       this._fadeOut(() => {
         this._setState('photo');
         this._showPhoto(0);
@@ -144,15 +144,12 @@ class PreschoolTour {
     };
 
     if (this.config.outroVideo) {
-      // Load & play outro video behind the overlay
       this.outroSrc.src = this.config.outroVideo;
       this.outroVideo.load();
       this.outroVideo.play().catch(() => {});
       this.outroVideo.addEventListener('ended', showComplete, { once: true });
-      // Fallback if video is short/fails
       setTimeout(showComplete, 3000);
     } else {
-      // No outro video — show complete screen immediately
       setTimeout(showComplete, 400);
     }
   }
@@ -186,7 +183,7 @@ class PreschoolTour {
       dot.classList.toggle('done',   i < index);
     });
 
-    this.progressLbl.textContent = `Step ${index + 1} of ${total}`;
+    this.progressLbl.textContent = `Крок ${index + 1} з ${total}`;
 
     // Progress bar fill
     const pct = total <= 1 ? 100 : (index / (total - 1)) * 100;
