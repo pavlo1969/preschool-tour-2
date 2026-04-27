@@ -1,0 +1,11 @@
+{
+  "introVideo": "video/intro.mp4",
+  "outroVideo": "",
+  "photos": [
+    { "src": "photo/1.jpg", "hotspot": { "x": 50, "y": 75 } },
+    { "src": "photo/2.jpg", "hotspot": { "x": 50, "y": 75 } },
+    { "src": "photo/3.jpg", "hotspot": { "x": 50, "y": 75 } },
+    { "src": "photo/4.jpg", "hotspot": { "x": 50, "y": 75 } },
+    { "src": "photo/5.jpg", "hotspot": { "x": 50, "y": 75 } }
+  ]
+}
